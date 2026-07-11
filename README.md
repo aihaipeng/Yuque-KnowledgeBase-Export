@@ -35,10 +35,13 @@ Windows 也可直接双击 `Start.bat`（自动装依赖并启动）。macOS 用
 
 - **在线导出**：点左侧「登录语雀」，弹出浏览器后手动完成登录（账号密码 → 拖动滑块 → 短信验证码）。登录成功后，你名下的知识库会自动填入列表，标记为 `[在线]`。（会话会记住，下次通常免登录。）
 - **本地导入**（无需登录）：点「导入文件」选择一个或多个 `.lakebook` 文件；或点「导入目录」选一个文件夹，自动递归找出里面所有 `.lakebook`。导入的文件标记为 `[本地]`。
+<img width="2276" height="1393" alt="image" src="https://github.com/user-attachments/assets/80aa6d27-064f-44b8-97f2-de899afc3bf6" />
+<img width="2282" height="1397" alt="image" src="https://github.com/user-attachments/assets/735355b6-a7e5-4f1b-b8cf-0fa3098e950e" />
 
 ### 第 3 步：选择条目
 
 在列表中点选要处理的条目，按住 Ctrl / Shift 可多选，或点「全选」。选错了可选中后点「移除选中」。
+
 
 ### 第 4 步：设置转换选项
 
@@ -54,6 +57,8 @@ Windows 也可直接双击 `Start.bat`（自动装依赖并启动）。macOS 用
 
 - 在线条目：触发导出 → 下载 `.lakebook` → （可选）转 Markdown。
 - 本地条目：直接转 Markdown。
+<img width="979" height="653" alt="image" src="https://github.com/user-attachments/assets/d7d126e4-d536-4dc8-93f0-c5407363eeda" />
+
 
 ### 第 6 步：查看结果与重试
 
@@ -66,6 +71,8 @@ Windows 也可直接双击 `Start.bat`（自动装依赖并启动）。macOS 用
 | 下载的 `.lakebook` | `export/lakebook/` |
 | 转换后的 Markdown | `export/markdown/{知识库名}/` |
 | 浏览器会话 | `yuque_profile/` |
+<img width="1113" height="626" alt="image" src="https://github.com/user-attachments/assets/5df49851-33b2-4a3f-a9b6-3ef5d1c8ad85" />
+
 
 每个 Markdown 目录含按序号命名的文档（如 `01-xxx.md`）、可选的 `attachments/` 图片文件夹、可选的 `_index.md` 索引。
 
