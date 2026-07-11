@@ -1,0 +1,29 @@
+# ---- 敏感数据：绝不能提交 ----
+yuque_profile/          # 浏览器登录会话（含 cookie）
+*.har                   # 抓包文件，可能含 token/cookie
+
+# ---- 运行产物：个人知识库内容 ----
+export/                 # 下载的 .lakebook 与转换出的 Markdown
+books.json
+selected_books.json
+
+# ---- 打包产物：中间文件可由 Build-Windows.bat 重新生成 ----
+build/
+*.spec
+# dist 只保留最终可执行程序，忽略其余中间/临时文件
+dist/*
+!dist/YuqueExporter.exe
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# ---- 编辑器/系统 ----
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
