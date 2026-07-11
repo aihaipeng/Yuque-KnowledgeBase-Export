@@ -1,4 +1,4 @@
-# ---- 敏感数据：绝不能提交 ----
+# ---- 敏感数据 ----
 yuque_profile/          # 浏览器登录会话（含 cookie）
 *.har                   # 抓包文件，可能含 token/cookie
 
