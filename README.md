@@ -71,8 +71,6 @@ Windows 也可直接双击 `Start.bat`（自动装依赖并启动）。macOS 用
 | 下载的 `.lakebook` | `export/lakebook/` |
 | 转换后的 Markdown | `export/markdown/{知识库名}/` |
 | 浏览器会话 | `yuque_profile/` |
-<img width="1113" height="626" alt="image" src="https://github.com/user-attachments/assets/5df49851-33b2-4a3f-a9b6-3ef5d1c8ad85" />
-<img width="1244" height="1020" alt="image" src="https://github.com/user-attachments/assets/279b0184-b634-4b07-ac35-1350aaf335ba" />
 
 
 
