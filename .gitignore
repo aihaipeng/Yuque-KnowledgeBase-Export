@@ -16,6 +16,7 @@ build/
 # dist 只保留最终可执行程序，忽略其余中间/临时文件
 dist/*
 !dist/YuqueExporter.exe
+YuqueExporter.zip
 
 # ---- Python ----
 __pycache__/

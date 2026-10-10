@@ -2,21 +2,17 @@
 
 语雀知识库一站式导出工具：**登录语雀 → 下载知识库（.lakebook）→ 自动转为 Markdown**。也支持直接导入本地已有的 `.lakebook` 文件转换，全程本机处理。
 
-**双击 `dist/YuqueExporter.exe` 即可使用，无需安装任何东西。**
+**下载 `YuqueExporter.exe`，双击即可使用，无需安装任何东西。**
 
 ---
 
 ## 用户流程
 
-### ① 获取并打开程序
+### ① 下载并运行
 
-```bash
-git clone https://github.com/aihaipeng/Yuque-KnowledgeBase-Export.git
-cd Yuque-KnowledgeBase-Export
-```
+👉 **[点击下载 YuqueExporter.exe](https://github.com/aihaipeng/Yuque-KnowledgeBase-Export/raw/master/dist/YuqueExporter.exe)**（约 83 MB）
 
-双击 `dist/YuqueExporter.exe`。
-
+- 双击运行即可，无需安装（不需要 Python、不需要任何依赖）。
 - 首次运行若被 Windows SmartScreen 拦截：点「更多信息」→「仍要运行」。
 - 打开后主窗口：左侧操作，右侧实时日志。
 
@@ -70,6 +66,8 @@ cd Yuque-KnowledgeBase-Export
 ## 开发者
 
 ```bash
+git clone https://github.com/aihaipeng/Yuque-KnowledgeBase-Export.git
+cd Yuque-KnowledgeBase-Export
 python -m pip install -r requirements.txt   # DrissionPage / markdownify / pyyaml
 python yuque_export.py                       # 从源码启动（也可双击 Start.bat）
 ```
