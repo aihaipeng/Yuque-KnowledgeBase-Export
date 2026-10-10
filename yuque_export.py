@@ -8,6 +8,7 @@
 import json
 import os
 import re
+import socket
 import sys
 import time
 import queue
@@ -59,12 +60,43 @@ def find_browser():
     return None
 
 
+def _cdp_alive(addr):
+    """检测 addr(127.0.0.1:port) 是否为可用的 CDP 调试端口。"""
+    try:
+        with urllib.request.urlopen(f'http://{addr}/json/version', timeout=2) as r:
+            return r.status == 200
+    except Exception:
+        return False
+
+
+def _free_port():
+    s = socket.socket()
+    s.bind(('127.0.0.1', 0))
+    port = s.getsockname()[1]
+    s.close()
+    return port
+
+
 def make_page():
     co = ChromiumOptions()
     co.set_user_data_path(PROFILE_DIR)   # 持久化会话，避免每次都登录
     browser = find_browser()
     if browser:
         co.set_browser_path(browser)     # 显式指定 Chrome / Edge
+    # 默认端口 9222 若被非调试程序占用，DrissionPage 会连接超时报错：
+    # 探测可用性，已有受管浏览器则直接接管，否则换一个空闲端口
+    if not _cdp_alive('127.0.0.1:9222'):
+        port = 0
+        port_file = os.path.join(PROFILE_DIR, '.cdp_port')
+        if os.path.exists(port_file):
+            last = open(port_file, encoding='utf-8').read().strip()
+            if last.isdigit() and _cdp_alive(f'127.0.0.1:{last}'):
+                port = int(last)         # 上次启动的受管浏览器仍在运行
+        if not port:
+            port = _free_port()
+        os.makedirs(PROFILE_DIR, exist_ok=True)
+        open(port_file, 'w', encoding='utf-8').write(str(port))
+        co.set_local_port(port)
     return ChromiumPage(co)
 
 
