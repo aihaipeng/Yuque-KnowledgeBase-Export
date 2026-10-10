@@ -72,3 +72,4 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: ${{ matrix.asset }}
+          body: ""   # Releases 页只展示文件，不写说明文字
