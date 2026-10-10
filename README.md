@@ -1,4 +1,4 @@
-# yuque-exporter-v2
+# Yuque-KnowledgeBase-Export
 
 语雀知识库一站式导出工具：**登录语雀 → 下载知识库（.lakebook）→ 自动转为 Markdown**。也支持直接导入本地已有的 `.lakebook` 文件转换，全程本机处理。
 
