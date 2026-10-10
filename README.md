@@ -8,7 +8,12 @@
 
 ## 用户流程
 
-### ① 打开程序
+### ① 获取并打开程序
+
+```bash
+git clone https://github.com/aihaipeng/Yuque-KnowledgeBase-Export.git
+cd Yuque-KnowledgeBase-Export
+```
 
 双击 `dist/YuqueExporter.exe`。
 
