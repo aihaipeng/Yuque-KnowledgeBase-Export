@@ -13,9 +13,8 @@ selected_books.json
 # ---- 打包产物：中间文件可由 Build-Windows.bat 重新生成 ----
 build/
 *.spec
-# dist 只保留最终可执行程序，忽略其余中间/临时文件
-dist/*
-!dist/YuqueExporter.exe
+# 打包产物全部忽略：发布文件由 GitHub Actions 构建并上传 Releases
+dist/
 YuqueExporter.zip
 
 # ---- Python ----
