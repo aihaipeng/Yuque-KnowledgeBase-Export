@@ -65,8 +65,8 @@ jobs:
           python -m pip install pillow -q
           python -c "from PIL import Image; Image.new('RGB', (128, 128), (66, 133, 244)).save('AppDir/usr/share/icons/hicolor/128x128/apps/YuqueExporter.png')"
           ./linuxdeploy-x86_64.AppImage --appimage-extract-and-run --appdir AppDir --output appimage
-          # 输出名由 desktop 文件的 Name 派生（空格转下划线），用通配符匹配后统一改名
-          mv ./*-x86_64.AppImage YuqueExporter.AppImage
+          # 输出名由 desktop 文件的 Name=Yuque Exporter 派生（空格转下划线）
+          mv "Yuque_Exporter-x86_64.AppImage" YuqueExporter.AppImage
 
       - name: Upload to GitHub Release
         uses: softprops/action-gh-release@v2
